@@ -41,19 +41,25 @@ namespace HelloWorld
             //        Console.WriteLine(animal);
             //    }
             //}
+
+            Console.WriteLine("enter string");
+            var userResponse = Console.ReadLine();
+            var builder = "";
+
+            for (int i = 0; i < userResponse.Length; i++)
+            {
+                var position = i + 1;
+                for (int k = 0; k < position; k++)
+                {
+                    builder += userResponse[i];
+                }
+                builder += "-";
+            }
+            char[] charToTrim = { '-' };
+            var output = builder.TrimEnd(charToTrim);
+            Console.WriteLine(output);
+            Console.ReadLine();
         }
     }
 }
 
-    //     var numOfVowelsInWord = 0;
-    //  foreach (var currentChar in animal)
-    // {
-    //(currentChar == 'a' || currentChar == 'e' || currentChar == 'i' || currentChar == 'o' || currentChar == 'u' || currentChar 'y')
-                   // {
-                       // numOfVowelsInWord++;
-                   // }
-                //}
-               // if (numOfVowelsInWord >= 2)
-              //  {
-                //    Console.WriteLine(animal);
-             //   }
